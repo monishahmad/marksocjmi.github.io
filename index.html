@@ -1,5 +1,11 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>The Marketing Society JMI</title>
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@1&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -162,7 +168,73 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dot{animation:none}}
 </style>
+<style>
+/* ===== 2026 visual refinement ===== */
+:root{
+  --max:1180px;
+  --glow:rgba(200,64,79,.18);
+}
+body{background:var(--bg);background-image:radial-gradient(circle at 85% 8%,var(--glow),transparent 24rem),radial-gradient(circle at 10% 42%,rgba(255,255,255,.025),transparent 20rem);}
+.wrap{max-width:var(--max)}
+.strip{position:relative;overflow:hidden;letter-spacing:.01em}.strip>div{position:relative}
+.strip:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);transform:translateX(-100%);animation:shine 5s ease-in-out infinite}
+@keyframes shine{45%,100%{transform:translateX(100%)}}
+header.top{backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 88%,transparent)}
+.brand img{filter:drop-shadow(0 0 10px var(--glow))}
+nav a{transition:color .2s ease,background .2s ease}
+nav a:hover{background:var(--surface)}
+.tog{transition:transform .25s ease,border-color .2s ease}.tog:hover{transform:rotate(20deg)}
+.hero{padding-block:clamp(64px,9vw,104px) 52px;position:relative}
+.hero:after{content:"01";position:absolute;right:0;top:clamp(58px,8vw,96px);font:400 clamp(5rem,14vw,10rem)/1 var(--display);color:var(--line);opacity:.42;pointer-events:none}
+.hero h1{font-size:clamp(4rem,10.8vw,9.2rem);max-width:10ch;position:relative;z-index:1}
+.hero .grid{grid-template-columns:minmax(280px,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,78px);margin-top:50px}
+.hero .lede{font-size:clamp(1rem,1.5vw,1.18rem);line-height:1.75}
+.cta .btn{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.cta .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.18)}
+.photo{position:relative}.hero .photo:before{content:"MARKSOC / JMI";position:absolute;z-index:2;left:14px;top:14px;padding:7px 10px;background:var(--paper);color:var(--on-paper);font:700 .62rem/1 var(--body);letter-spacing:.14em}.photo img{box-shadow:0 24px 70px rgba(0,0,0,.25)}
+.stats{margin-top:8px;background:linear-gradient(90deg,transparent,var(--surface),transparent)}
+.stats dd,.big dd{letter-spacing:.01em}
+section{padding-block:clamp(72px,9vw,110px) 0;scroll-margin-top:82px}
+.head{grid-template-columns:minmax(0,.9fr) minmax(260px,.8fr);align-items:end;margin-bottom:42px}.head p{font-size:1rem;line-height:1.75}
+.cols3{gap:18px}.card{min-height:220px;padding:28px;background:linear-gradient(145deg,var(--surface),color-mix(in srgb,var(--surface) 78%,var(--bg)));transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}.card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--accent) 55%,var(--line));box-shadow:0 18px 40px rgba(0,0,0,.14)}
+.card h3{font-size:1.75rem}.row{transition:padding .2s ease}.row:hover{padding-left:10px}.row h3{font-size:1.9rem}
+.board{gap:44px}.feature{box-shadow:0 20px 60px rgba(0,0,0,.18);border:1px solid color-mix(in srgb,var(--accent-paper) 25%,transparent)}
+.pick{transition:transform .2s ease,border-color .2s ease,background .2s ease}.pick:hover{transform:translateX(4px)}.pick[aria-pressed=true]{box-shadow:inset 3px 0 0 var(--accent)}
+.skills{gap:18px}.skills .card{min-height:0}.chips li{transition:background .2s ease,color .2s ease,border-color .2s ease}.chips li:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.big{gap:22px}.big div{padding-top:18px}.join{gap:clamp(36px,7vw,84px)}.join .body{padding-top:8px}.deadline{box-shadow:0 14px 30px rgba(200,64,79,.22)}
+.contact{background:var(--surface);padding:18px;border:1px solid var(--line);border-radius:4px}.copy{transition:.2s ease}.copy:active{transform:scale(.97)}
+.src{border-top:1px solid var(--line);margin-top:90px;padding-top:34px}
+footer{margin-top:100px}
+.reveal{transition:opacity .65s ease,transform .65s ease}.js .reveal:not(.in){opacity:0;transform:translateY(18px)}
+@media(max-width:900px){.hero:after{right:4px}.head{grid-template-columns:1fr}.hero .grid{grid-template-columns:1fr}.photo{max-width:760px;margin-inline:auto}.feature{box-shadow:none}.src{margin-top:64px}}
+@media(max-width:560px){.hero{padding-top:52px}.hero h1{font-size:clamp(3rem,14.5vw,5rem)}.hero:after{top:52px;font-size:5rem}.hero .grid{margin-top:34px}.stats div{padding:18px 12px}.stats dd{font-size:2.2rem}.card{padding:22px;min-height:0}.row{gap:8px}.row h3{font-size:1.55rem}.feature{padding:16px}.feature img{max-width:190px}.join{gap:28px}.src{margin-top:54px}}
+@media(prefers-reduced-motion:reduce){.strip:before{animation:none}.js .reveal:not(.in){opacity:1;transform:none}.card,.pick,.cta .btn{transition:none}}
 
+
+.contact-card{margin:clamp(72px,9vw,110px) 0 7rem;padding:0;border:1px solid var(--line);background:linear-gradient(135deg,var(--surface),color-mix(in srgb,var(--surface) 78%,var(--accent) 22%));border-radius:14px;overflow:hidden;position:relative;box-shadow:0 24px 70px rgba(0,0,0,.14)}
+.contact-card:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 88% 15%,rgba(200,64,79,.24),transparent 32%),linear-gradient(90deg,transparent,rgba(255,255,255,.025));pointer-events:none}
+.contact-card-inner{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:3rem;padding:3.2rem}
+.contact-card h2{max-width:720px;margin:.35rem 0 1rem;font-size:clamp(3rem,7vw,6.5rem);line-height:.9}
+.contact-card .intro{max-width:620px;color:var(--muted);font-size:1rem;line-height:1.75;margin:0}
+.contact-links{display:grid;gap:10px;align-content:center}
+.contact-link{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.05rem 1.15rem;border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:8px;color:var(--fg);text-decoration:none;transition:transform .2s ease,border-color .2s ease,background .2s ease}
+.contact-link:hover{transform:translateX(-5px);border-color:var(--accent);background:rgba(200,64,79,.08)}
+.contact-link .meta{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.contact-link strong{font-size:.96rem;font-weight:600;overflow-wrap:anywhere}
+.contact-link .arrow{font-size:1.2rem;color:var(--accent)}
+@media(max-width:800px){.contact-card-inner{grid-template-columns:1fr;padding:2rem 1.25rem;gap:2rem}.contact-card{margin-bottom:5rem}.contact-card h2{font-size:clamp(3rem,15vw,5rem)}}
+
+
+
+#left{font-variant-numeric:tabular-nums}
+.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:420px}
+.clock>div{border:1px solid var(--line);background:var(--surface);border-radius:4px;padding:12px 6px 10px;text-align:center}
+.clock b{display:block;font:400 clamp(1.9rem,6vw,2.7rem)/1 var(--display);font-variant-numeric:tabular-nums;letter-spacing:.01em}
+.clock span{display:block;margin-top:6px;font:600 .64rem/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.clock[hidden]{display:none}
+</style>
+
+</head>
+<body>
 <div class="strip" id="strip"><div>
   <span><i class="dot"></i><b>Recruitments 2026–27 are live</b></span>
   <span id="left">Applications close 5 October 2026</span>
@@ -179,6 +251,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
       <a class="x" href="#work">Work</a>
       <a href="#board">Board</a>
       <a class="x" href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
       <a href="#join">Join</a>
     </nav>
     <button class="tog" id="tog" type="button" aria-label="Switch colour theme">◐</button>
@@ -211,7 +284,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     <div><dd>2024</dd><dt>Year founded</dt></div>
   </dl>
 
-  <section id="what">
+  <section id="what" class="reveal">
     <div class="head">
       <p class="label">What we do</p>
       <h2>Real briefs. Real brands. <em class="s">Real practice.</em></h2>
@@ -235,7 +308,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     </div>
   </section>
 
-  <section id="why">
+  <section id="why" class="reveal">
     <div class="head">
       <p class="label">Why we exist</p>
       <h2>Four gaps on campus</h2>
@@ -248,7 +321,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     </div>
   </section>
 
-  <section id="work">
+  <section id="work" class="reveal">
     <div class="head">
       <p class="label">Our work</p>
       <h2>Projects we have delivered</h2>
@@ -263,7 +336,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     </div>
   </section>
 
-  <section id="board">
+  <section id="board" class="reveal">
     <div class="head">
       <p class="label">Executive board 2026–27</p>
       <h2>Eleven leaders. <em class="s">One society.</em></h2>
@@ -285,7 +358,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="reveal">
     <div class="head">
       <p class="label">Skills and tools</p>
       <h2>Closing the gap from college to corporate</h2>
@@ -301,7 +374,7 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     <p class="note">Hands-on experience with these tools builds the skillset employers expect, which helps with internships and first jobs.</p>
   </section>
 
-  <section id="industry">
+  <section id="industry" class="reveal">
     <div class="head">
       <p class="label">The industry you are stepping into</p>
       <h2>Marketing is a big field</h2>
@@ -315,7 +388,29 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
     <p class="note">Figures are from the Society's UnPack 4.0 presentation.</p>
   </section>
 
-  <section id="join">
+
+  <section id="contact" class="contact-card reveal" aria-labelledby="contact-title">
+    <div class="contact-card-inner">
+      <div>
+        <p class="label">Let's talk</p>
+        <h2 id="contact-title">Have a brief? <em class="s">Let’s make it matter.</em></h2>
+        <p class="intro">Whether you’re a student, brand, NGO, startup, or campus organisation, get in touch with The Marketing Society JMI for collaborations, marketing projects, workshops, partnerships, and society enquiries.</p>
+      </div>
+      <div class="contact-links" aria-label="Contact options">
+        <a class="contact-link" href="mailto:themarketingsociety.jmi@gmail.com">
+          <span><span class="meta">Email us</span><strong>themarketingsociety.jmi@gmail.com</strong></span><span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/marksoc_jmi/" target="_blank" rel="noopener">
+          <span><span class="meta">Instagram</span><strong>@marksoc_jmi</strong></span><span class="arrow">↗</span>
+        </a>
+        <a class="contact-link" href="#join">
+          <span><span class="meta">Students</span><strong>Explore recruitment →</strong></span><span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="join" class="reveal">
     <div class="head">
       <p class="label">Recruitments 2026–27</p>
       <h2>Join the society. <em class="s">Make your mark.</em></h2>
@@ -326,6 +421,12 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
       </figure>
       <div class="body">
         <div class="deadline"><b>5 Oct 2026</b><span id="deadlineNote">Last date to apply</span></div>
+        <div class="clock" id="clock" role="timer" aria-label="Time left to apply">
+          <div><b id="cD">--</b><span>Days</span></div>
+          <div><b id="cH">--</b><span>Hours</span></div>
+          <div><b id="cM">--</b><span>Min</span></div>
+          <div><b id="cS">--</b><span>Sec</span></div>
+        </div>
         <p>MarkSoc is looking for its next team. Pick the area that fits you and apply through the form.</p>
         <ul class="chips" aria-label="Open teams">
           <li>Brand Consulting</li><li>HR</li><li>Graphics</li><li>Event Management</li><li>Content</li><li>Marketing</li><li>Client Relations</li><li>Editing</li><li>Sponsorship</li><li>Photography &amp; Videography</li>
@@ -356,6 +457,16 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
 
 <footer><div><span>The Marketing Society · Jamia Millia Islamia, New Delhi</span><span>Experience the world of marketing.</span></div></footer>
 
+
+<script>
+(function(){
+  const items=document.querySelectorAll('section.reveal');
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+    items.forEach(x=>io.observe(x));
+  }else items.forEach(x=>x.classList.add('in'));
+})();
+</script>
 <script>
 (function(){
   var TEAM=[{"name": "Monish Ahmad", "role": "President", "quote": "Lead with purpose. Build with people.", "bio": "As President of The Marketing Society, Monish is the chief architect of TMS's direction and legacy. He sets strategic vision, champions the society's values, and inspires every member to pursue excellence. Under his leadership, TMS shapes future marketing professionals.", "tags": ["Strategic Vision", "Leadership", "Decision Making", "Society Growth"]}, {"name": "Sana Ali", "role": "Vice President", "quote": "Strategy without execution is just a dream.", "bio": "Sana Ali is the operational backbone of TMS. As Vice President, she ensures the President's vision translates into tangible outcomes across every department. A decisive force, Sana coordinates between teams and keeps the society moving as one unified unit.", "tags": ["Operations", "Team Coordination", "Execution", "Cross-Dept Leadership"]}, {"name": "Safiya Khan", "role": "HR Director", "quote": "Great organisations are built on great people.", "bio": "Safiya is the cultural heartbeat of TMS. As HR Director, she oversees recruitment, onboarding, member engagement, and internal welfare. Her work ensures TMS remains a space where talent thrives and every voice is heard.", "tags": ["Recruitment", "Member Welfare", "Team Culture", "Conflict Resolution"]}, {"name": "Afifa Khan Saroha", "role": "Client Relations Director", "quote": "Every relationship is a door waiting to be opened.", "bio": "Afifa is the professional face TMS presents to the world. She manages every external partnership, ensuring TMS's client relationships are built on trust and mutual value. Her poise and persistence turn first meetings into lasting alliances.", "tags": ["Client Management", "Partnerships", "Networking", "Brand Representation"]}, {"name": "Syed Munaan", "role": "Consulting Director", "quote": "Data informs. Insight transforms.", "bio": "Syed brings strategic consulting rigour to TMS. As Consulting Director, he leads the analytical and advisory function, helping the society solve complex problems, evaluate opportunities, and sharpen its competitive edge.", "tags": ["Strategic Analysis", "Advisory", "Problem Solving", "Market Insight"]}, {"name": "Nabeel Mohammad Helal", "role": "Sponsorship Head", "quote": "Every brand is a potential partner. Find the why.", "bio": "Nabeel is TMS's dealmaker. He identifies, pitches, and secures sponsorships that give TMS the resources to execute at the highest level. From brand partnerships to financial backing, Nabeel opens the doors that let the society dream bigger and deliver better.", "tags": ["Sponsorship Pitching", "Brand Outreach", "Negotiations", "Fundraising"]}, {"name": "Faheem Ahmad", "role": "Graphics Head", "quote": "Design is not decoration — it is communication.", "bio": "Faheem is the visual intelligence behind TMS. As Graphics Head, he leads the creative design output, from social media assets and posters to event branding. Every pixel under Faheem's watch is intentional.", "tags": ["Brand Design", "Visual Identity", "Social Media Graphics", "Typography"]}, {"name": "Ameera Arif", "role": "Content Head", "quote": "Words are the oldest marketing tool. Use them wisely.", "bio": "Ameera is TMS's storyteller-in-chief. She leads content strategy and production, from written pieces and captions to long-form articles and campaign narratives. Her work gives TMS a distinctive voice.", "tags": ["Content Strategy", "Copywriting", "Brand Storytelling", "Social Media Writing"]}, {"name": "Filza Khan", "role": "Events Head", "quote": "An event worth attending is an experience worth remembering.", "bio": "Filza orchestrates every TMS experience from the ground up. As Events Head, she plans, coordinates, and delivers, from intimate workshops to flagship society showcases.", "tags": ["Event Planning", "Logistics", "Vendor Coordination", "Audience Experience"]}, {"name": "Aiytal Khan", "role": "Photography & Videography Head", "quote": "If they don't know about it, it didn't happen.", "bio": "Aiytal ensures TMS is always in the spotlight. As PnV Head, she designs and executes outreach campaigns that amplify the society's presence across platforms and campuses.", "tags": ["Promotions", "Digital Reach", "Social Outreach", "Brand Amplification"]}, {"name": "Mohd Uzair", "role": "Editing Head", "quote": "Perfection lives in the final cut.", "bio": "Uzair is TMS's quality gatekeeper. As Editing Head, he refines every piece of content, video, copy, and visual, before it reaches the public eye.", "tags": ["Video Editing", "Post-Production", "Copy Editing", "Quality Control"]}];
@@ -378,21 +489,28 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
   picks.forEach(function(b,i){b.addEventListener("click",function(){show(i)})});
   show(0);
 
-  /* recruitment countdown (deadline 5 Oct 2026, end of day IST) */
-  var end=new Date("2026-10-05T23:59:59+05:30").getTime(),now=Date.now();
-  var days=Math.ceil((end-now)/86400000);
-  var left=$("left"),ap=$("stripApply"),dn=$("deadlineNote");
-  if(now>end){
-    left.textContent="Applications are closed. Follow @marksoc_jmi for the next round.";
-    ap.textContent="Follow on Instagram →";ap.href="https://www.instagram.com/marksoc_jmi/";
-    dn.textContent="Applications closed";
-  }else if(days<=1){
-    left.textContent="Last day to apply: 5 October 2026";
-    dn.textContent="Closes today";
-  }else{
-    left.textContent=days+" days left to apply, closing 5 October 2026";
-    dn.textContent=days+" days left";
+  /* live recruitment countdown (closes end of 5 Oct 2026, IST) */
+  var end=new Date("2026-10-05T23:59:59+05:30").getTime();
+  var left=$("left"),ap=$("stripApply"),dn=$("deadlineNote"),clk=$("clock");
+  var cD=$("cD"),cH=$("cH"),cM=$("cM"),cS=$("cS"),timer=null;
+  var pad=function(n){return n<10?"0"+n:""+n};
+  function tick(){
+    var ms=end-Date.now();
+    if(ms<=0){
+      left.textContent="Applications are closed. Follow @marksoc_jmi for the next round.";
+      ap.textContent="Follow on Instagram \u2192";ap.href="https://www.instagram.com/marksoc_jmi/";
+      dn.textContent="Applications closed";
+      clk.hidden=true;
+      if(timer)clearInterval(timer);
+      return;
+    }
+    var t=Math.floor(ms/1000),d=Math.floor(t/86400),h=Math.floor(t%86400/3600),m=Math.floor(t%3600/60),sc=t%60;
+    cD.textContent=pad(d);cH.textContent=pad(h);cM.textContent=pad(m);cS.textContent=pad(sc);
+    left.textContent="Closes in "+(d>0?d+"d ":"")+pad(h)+"h "+pad(m)+"m "+pad(sc)+"s \u00B7 5 October 2026";
+    dn.textContent=d>=1?"Last date to apply":"Closes today";
   }
+  tick();
+  if(end>Date.now())timer=setInterval(tick,1000);
 
   /* theme toggle */
   var root=document.documentElement;
@@ -413,5 +531,5 @@ footer div{max-width:1120px;margin-inline:auto;display:flex;flex-wrap:wrap;gap:8
   });
 })();
 </script>
-
-</body></html>
+</body>
+</html>
